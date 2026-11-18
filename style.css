@@ -1,0 +1,72 @@
+:root {
+  --main-color: #2d2e32;
+  --secondery-color: #18f7da;
+  --3rd-color: rgba(255, 255, 255, 0.7);
+  --padding-space-1: 1rem;
+  --padding-space-2: 2rem;
+  --padding-space-3: 3rem;
+  --padding-space-4: 4rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: sans-serif !important;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: red;
+  margin: 0;
+  padding: 0;
+}
+
+/* start header  */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-space-2) var(--padding-space-3);
+}
+
+.header .logo {
+  display: flex;
+  gap: var(--padding-space-1);
+}
+
+.header .logo h2 {
+  color: var(--3rd-color);
+  margin: 0;
+}
+
+.header .logo h2:first-child {
+  color: var(--secondery-color);
+}
+
+.header nav {
+  display: flex;
+  gap: var(--padding-space-4);
+}
+
+.header nav a {
+  color: var(--3rd-color);
+  text-decoration: none;
+}
+
+.header nav a:first-child {
+  color: var(--secondery-color);
+}
+
+.header div:last-child {
+  display: flex;
+  gap: var(--padding-space-3);
+}
+
+.header div:last-child a {
+  text-decoration: none;
+  color: var(--3rd-color);
+}
+
+/* end header  */
