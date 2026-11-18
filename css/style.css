@@ -31,6 +31,14 @@ body {
   padding: var(--padding-space-2) var(--padding-space-3);
 }
 
+.header-hr {
+  margin: 0 auto;
+  border: none;
+  width: calc(100% - var(--padding-space-3) * 2);
+  height: 1px;
+  background-color: black;
+}
+
 .header .logo a {
   text-decoration: none;
   display: flex;
@@ -62,6 +70,7 @@ body {
 
 .header div:last-child {
   display: flex;
+  align-items: center;  
   gap: var(--padding-space-3);
 }
 
@@ -74,4 +83,13 @@ body {
   color: var(--3rd-color);
 }
 
+.g-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
 /* end header  */
