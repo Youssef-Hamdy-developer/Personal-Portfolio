@@ -16,27 +16,34 @@
   <body>
     <!-- start header  -->
     <header class="header">
-      <div class="logo">
-        <a href="#">
-          <h2>&lt;<span>Y</span>/&gt;</h2>
-          <h2>Youssef</h2>
-        </a>
-      </div>
-      <nav>
-        <a href="#">&lt;Home&gt;</a>
-        <a href="#">Projects</a>
-        <a href="#">Services</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div>
-        <div>
-          <a href="https://github.com/Youssef-Hamdy-developer">
-            <i class="fa-brands fa-github"></i>
+      <div class="container">
+        <div class="logo">
+          <a href="#">
+            <h2>&lt;<span>Y</span>/&gt;</h2>
+            <h2>Youssef</h2>
           </a>
-          <a href="https://github.com/Youssef-Hamdy-developer">Github</a>
         </div>
-        <a class="g-icon" href="mailto:yhm62394@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        <nav>
+          <a href="#">&lt;Home&gt;</a>
+          <a href="#">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div>
+          <div>
+            <a
+              class="github-link"
+              href="https://github.com/Youssef-Hamdy-developer"
+            >
+              <i class="fa-brands fa-github"></i>
+              <h3>Github</h3></a
+            >
+          </div>
+          <a class="g-icon" href="mailto:yhm62394@gmail.com"
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+        </div>
       </div>
     </header>
     <hr class="header-hr" />
@@ -45,24 +52,32 @@
     <main class="hero">
       <div class="container">
         <div class="hero-text">
-        <h1>
-          Hello, <br />
-          I'm <span>Youssef</span>, <br>Front-end Developer
-        </h1>
-        <p>I build responsive and user-friendly websites using modern web technologies. I turn designs into fast, polished interfaces with HTML, CSS, and JavaScript.</p>
-        <a class="view-work-btn" href="#">View My projects</a>
-        <a class="github-btn" href="https://github.com/Youssef-Hamdy-developer">GitHub</a>
-      </div>
-      <div class="hero-shape">
-        <div class="circle">
-          <div class="code-window">
-            <div class="window-bar">
-              <div></div>
-              <div></div>
-              <div></div>
-              <p>about.js</p>
-            </div>
-            <pre>
+          <h1>
+            Hello, <br />
+            I'm <span>Youssef</span>, <br />Front-end Developer
+          </h1>
+          <p>
+            I build responsive and user-friendly websites using modern web
+            technologies. I turn designs into fast, polished interfaces with
+            HTML, CSS, and JavaScript.
+          </p>
+          <a class="view-work-btn" href="#">View My projects</a>
+          <a
+            class="github-btn"
+            href="https://github.com/Youssef-Hamdy-developer"
+            >GitHub</a
+          >
+        </div>
+        <div class="hero-shape">
+          <div class="circle">
+            <div class="code-window">
+              <div class="window-bar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <p>about.js</p>
+              </div>
+              <pre>
               <span class="span-1">const</span> youssef = {
                 role: <span class="span-2">"Front-end developer"</span>,
                 skills: [ <span class="span-2">"HTML"</span>, <span class="span-2">"CSS"</span> ],
@@ -70,16 +85,63 @@
                 next: <span class="span-2">"React"</span>
               };
             </pre>
-          </div>
-          <div class="mini-circles">
-            <div><i class="fa-brands fa-css3-alt"></i></div>
-            <div><i class="fa-brands fa-html5"></i></div>
-            <div><i class="fa-brands fa-square-js"></i></div>
+            </div>
+            <div class="mini-circles">
+              <div><i class="fa-brands fa-css3-alt"></i></div>
+              <div><i class="fa-brands fa-html5"></i></div>
+              <div><i class="fa-brands fa-square-js"></i></div>
+            </div>
           </div>
         </div>
       </div>
-      </div>
     </main>
     <!-- end hero section -->
+    <!-- start skills section  -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="skills-text">
+          <h3 class="special-color">&mdash; My Skills</h3>
+          <h2>technologies I <span class="special-color">use</span></h2>
+          <p>A mix of modern technologies that i enjoy working with.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-img">
+            <img src="image/html-5-svgrepo-com.svg" alt="" />
+          </div>
+          <h3 class="special-color">HTML 5</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-img">
+            <img src="image/css-3-svgrepo-com.svg" alt="" />
+          </div>
+          <h3 class="special-color">CSS 3</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-img js-img">
+            <img src="image/javascript-r.svg" alt="" />
+          </div>
+          <h3 class="special-color">JavaScript</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-img js-img">
+            <img src="image/git-svgrepo-com.svg" alt="" />
+          </div>
+          <h3 class="special-color">Git</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-img js-img">
+            <img src="image/github-142-svgrepo-com.svg" alt="" />
+          </div>
+          <h3 class="special-color">GitHub</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-img js-img">
+            <img src="image/vs-code-svgrepo-com.svg" alt="" />
+          </div>
+          <h3 class="special-color">VS vode</h3>
+        </div>
+      </div>
+    </section>
+    <!-- end skills section  -->
   </body>
 </html>
