@@ -31,14 +31,14 @@ body {
 }
 
 .container {
-  padding-right: 6rem;
-  padding-left: 6rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
 }
 @media (min-width: 992px) {
@@ -54,10 +54,36 @@ body {
   }
 }
 
+#progress-line {
+  max-width: 100%;
+  height: 3px;
+  background-color: var(--green-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  animation: progress linear;
+  animation-timeline: scroll();
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
 /* start header  */
 
 .header {
   font-family: "JetBrains Mono", monospace;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(5px);
+  z-index: 1;
 }
 
 .header .container {
@@ -114,6 +140,7 @@ body {
   display: flex;
   align-items: center;
   gap: 3rem;
+  transition: .5s;
 }
 
 .github-link {
@@ -320,7 +347,7 @@ body {
 
 .skills {
   background-color: var(--background-color-2);
-  padding: 6rem 0;
+  padding: 10rem 0;
 }
 
 .skills-text {
@@ -355,7 +382,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .skill-tile img {
@@ -408,7 +435,7 @@ body {
 
 .proj-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
   max-width: 1420px;
   margin: 0 auto;
@@ -420,11 +447,11 @@ body {
   border: 1px solid var(--dark-gray-color);
   border-radius: 1.5rem;
   padding: 1rem;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .card:hover {
-  border-color: var(--green-color); 
+  border-color: var(--green-color);
   transform: translatey(-10px);
 }
 
