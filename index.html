@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- start header  -->
-    <header class="header">
+    <header id="home" class="header">
       <div class="container">
         <div class="logo">
           <a href="#">
@@ -24,8 +24,8 @@
           </a>
         </div>
         <nav>
-          <a href="#">&lt;Home&gt;</a>
-          <a href="#">Projects</a>
+          <a href="#home">&lt;Home&gt;</a>
+          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
@@ -61,7 +61,7 @@
             technologies. I turn designs into fast, polished interfaces with
             HTML, CSS, and JavaScript.
           </p>
-          <a class="view-work-btn" href="#">View My projects</a>
+          <a class="view-work-btn" href="#projects">View My projects</a>
           <a
             class="github-btn"
             href="https://github.com/Youssef-Hamdy-developer"
@@ -78,12 +78,12 @@
                 <p>about.js</p>
               </div>
               <pre>
-              <span class="span-1">const</span> youssef = {
-                role: <span class="span-2">"Front-end developer"</span>,
-                skills: [ <span class="span-2">"HTML"</span>, <span class="span-2">"CSS"</span> ],
-                learning: <span class="span-2">"JavaScript"</span>,
-                next: <span class="span-2">"React"</span>
-              };
+    <span class="span-1">const</span> youssef = {
+      role: <span class="span-2">"Front-end developer"</span>,
+      skills: [ <span class="span-2">"HTML"</span>, <span class="span-2">"CSS"</span> ],
+      learning: <span class="span-2">"JavaScript"</span>,
+      next: <span class="span-2">"React"</span>
+    };
             </pre>
             </div>
             <div class="mini-circles">
@@ -104,44 +104,99 @@
           <h2>technologies I <span class="special-color">use</span></h2>
           <p>A mix of modern technologies that i enjoy working with.</p>
         </div>
-        <div class="skill-card">
-          <div class="skill-img">
+
+        <div class="skills-grid">
+          <div class="skill-tile">
             <img src="image/html-5-svgrepo-com.svg" alt="" />
+            <h3>HTML 5</h3>
           </div>
-          <h3 class="special-color">HTML 5</h3>
-        </div>
-        <div class="skill-card">
-          <div class="skill-img">
+          <div class="skill-tile">
             <img src="image/css-3-svgrepo-com.svg" alt="" />
+            <h3>CSS 3</h3>
           </div>
-          <h3 class="special-color">CSS 3</h3>
-        </div>
-        <div class="skill-card">
-          <div class="skill-img js-img">
+          <div class="skill-tile js-img">
             <img src="image/javascript-r.svg" alt="" />
+            <h3>JavaScript</h3>
           </div>
-          <h3 class="special-color">JavaScript</h3>
-        </div>
-        <div class="skill-card">
-          <div class="skill-img js-img">
+          <div class="skill-tile">
             <img src="image/git-svgrepo-com.svg" alt="" />
+            <h3>Git</h3>
           </div>
-          <h3 class="special-color">Git</h3>
-        </div>
-        <div class="skill-card">
-          <div class="skill-img js-img">
+          <div class="skill-tile">
             <img src="image/github-142-svgrepo-com.svg" alt="" />
+            <h3>GitHub</h3>
           </div>
-          <h3 class="special-color">GitHub</h3>
-        </div>
-        <div class="skill-card">
-          <div class="skill-img js-img">
+          <div class="skill-tile">
             <img src="image/vs-code-svgrepo-com.svg" alt="" />
+            <h3>VS Code</h3>
           </div>
-          <h3 class="special-color">VS vode</h3>
         </div>
       </div>
     </section>
     <!-- end skills section  -->
+    <!-- start projects section  -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="proj-text">
+          <h3 class="special-color">&mdash; My Projects</h3>
+          <h2>Some of<span class="special-color"> My Work</span></h2>
+          <p>Every project below is live. Click a card to open it.</p>
+        </div>
+        <div class="proj-cards">
+          <div class="card">
+            <img src="image/project-1.png" alt="project-1" />
+            <h4 class="special-color">LANDING PAGE</h4>
+            <h3>Landig page from scratch</h3>
+            <p>
+              A fully custom landing page with hero, features and a contact
+              section.
+            </p>
+            <div class="links">
+              <a href="https://youssef-hamdy-developer.github.io/Landing-Page/"
+              >view live
+            </a>
+            <a href="https://github.com/Youssef-Hamdy-developer/Landing-Page.git">
+              &lt;/&gt; code
+            </a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/project-2.png" alt="project-2" />
+            <h4 class="special-color">FRONTEND MENTOR</h4>
+            <h3>Social Links Profile</h3>
+            <p>
+              A fully custom landing page with hero, features and a contact
+              section.
+            </p>
+            <div class="links">
+              <a href="https://youssef-hamdy-developer.github.io/social-links-profile-main/"
+              >view live
+            </a>
+            <a href="https://github.com/Youssef-Hamdy-developer/social-links-profile-main.git">
+              &lt;/&gt; code
+            </a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="image/project-3.png" alt="project-3" />
+            <h4 class="special-color">FRONTEND MENTOR</h4>
+            <h3>Results Summary</h3>
+            <p>
+              A fully custom landing page with hero, features and a contact
+              section.
+            </p>
+            <div class="links">
+              <a href="https://youssef-hamdy-developer.github.io/social-links-profile-main/"
+              >view live
+            </a>
+            <a href="https://github.com/Youssef-Hamdy-developer/social-links-profile-main.git">
+              &lt;/&gt; code
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end projects section  -->
   </body>
 </html>
