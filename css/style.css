@@ -188,32 +188,31 @@ body {
   border-radius: 3px;
 }
 
-@media (max-width: 992px) {
-  .header nav {
-    display: none;
-  }
-}
 
-@media (max-width: 400px) {
-  .header .right-links {
-    display: none;
-  }
-    .header-hr {
-    display: none;
-  }
-}
-
-@media (min-width: 401px) {
+@media (min-width: 992px) {
   .header .links-btn {
     display: none;
   }
 }
 
+@media (max-width: 992px) {
+  .header nav {
+    display: none;
+  }
+    .header .right-links {
+    display: none;
+  }
+    .header-hr {
+    width: 100%;
+  }
+}
+
+
 /* end header  */
 /* start hero section  */
 
 .hero {
-  margin-top: clamp(2rem, 10vw, 8rem);
+  margin-top: clamp(4rem, 10vw, 8rem);
   margin-bottom: 9rem;
   position: relative;
 }
@@ -228,20 +227,16 @@ body {
   max-width: 800px;
 }
 
-.hero-text h1 span {
-  color: var(--green-color);
-}
-
 .hero-text h1 {
   font-size: clamp(2rem, 6vw, 4rem);
-  margin: 0;
+  margin: 2rem 0 0 0;
 }
 
 .hero-text p {
   color: var(--gray-color);
-  margin-bottom: clamp(1rem, 10vw, 4rem);
+  margin-bottom: clamp(1rem, 10vw, 2rem);
   line-height: 1.8;
-  word-spacing: clamp(2px, 1vw, 8px);
+  word-spacing: clamp(0, .5vw, 8px);
 }
 
 .view-work-btn {
@@ -380,7 +375,7 @@ body {
   bottom: -5rem;
   width: 2rem;
   height: 3.1rem;
-  border: 3px solid var(--white-color);
+  border: 3px solid var(--green-color);
   border-radius: 2.6rem;
   animation: hide both;
   animation-range:  entry 0% cover 15%;
@@ -394,17 +389,18 @@ body {
   top: .5rem;
   left: 0;
   right: 0;
-  background-color: var(--green-color);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border-bottom: 3px solid var(--white-color);
+  border-right: 3px solid var(--white-color);
+  transform: rotate(45deg);
   animation: move-down 2s infinite;
 }
 
 .scroll-btn::after {
   position: absolute;
   content: "SCROLL DOWN";
-  color: var(--green-color);
+  color: var(--white-color);
   width: 15rem;
   display: block;
   bottom: -2.5rem;
@@ -420,7 +416,7 @@ body {
 
   100% {
     opacity: 0;
-    transform: translatey(1.2rem);
+    transform: translatey(1.2rem) rotate(45deg);
   }
 }
 
@@ -454,10 +450,10 @@ body {
     flex-direction: column;
   }
   .scroll-btn {
-    bottom: 25rem;
+    bottom: 32rem;
   }
   .hero-shape .circle {
-    margin: 220px auto 0;
+    margin: 22rem auto 0;
     width: 300px;
     height: 300px;
   }
@@ -467,6 +463,16 @@ body {
   .circle .code-window pre {
     font-size: 0.8rem;
   }
+  .view-work-btn {
+    word-spacing: normal;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-text{
+    max-width: 340px;
+  }
+  
 }
 
 /* end hero section  */
@@ -493,9 +499,9 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
-  max-width: 1150px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -537,6 +543,12 @@ body {
 
 .skill-tile:hover h3 {
   color: var(--green-color);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }
 
 /* end skills  */
@@ -622,4 +634,176 @@ body {
   color: var(--green-color);
 }
 
+@media (max-width: 400px) {
+  .proj-cards {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .card {
+    height: fit-content;
+  }
+}
+
 /* end projects  */
+
+/* start contact  */
+
+.contact {
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--background-color-2);
+   padding: 6rem 0;
+}
+
+.contact .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-text {
+  margin-bottom: 3rem;
+  flex-basis: 300px;
+}
+
+.contact-text h2 {
+  color: var(--white-color);
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.contact-text p {
+  color: var(--gray-color);
+}
+
+.active-btn {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 4px;
+  border: var(--dark-gray-color) solid 1px;
+  border-radius: 2rem;
+  align-items: center;
+  gap: .7rem;
+}
+
+.active-btn p {
+  margin: 0;
+  margin-right: 1.8rem;
+}
+
+.active-btn span {
+  margin-left: .8rem;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: var(--green-color);
+  animation: pulse 1s alternate infinite;
+}
+
+.contact-links {
+  flex-basis: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.con-link {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--background-color);
+  padding: 1.2rem;
+  text-decoration: none;
+  border-radius: 25px;
+  border: 1px solid var(--dark-gray-color);
+  position: relative;
+  transition: .5s;
+}
+
+.con-link:hover {
+  border-color: var(--green-color);
+}
+
+.con-link:hover .arraw-icon {
+  transform: rotate(90deg);
+}
+
+.con-link .arraw-icon {
+  position: absolute;
+  right: 1.5rem;
+  color: var(--green-color);
+  transform: rotate(45deg);
+  transition: .5s;
+}
+
+.con-link .con-link-icon {
+  background-color: var(--background-color-2);
+  padding: 1rem;
+  border-radius: 50%;
+  color: var(--green-color);
+  font-size: 1.2rem;
+}
+
+.con-link p {
+  color: var(--gray-color);
+  margin: 0 0 10px;
+}
+
+.con-link h4 {
+  color: var(--white-color);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .contact .container {
+    flex-direction: column;
+  }
+  .con-link {
+    max-width: 600px;
+  }
+}
+
+/* end contact  */
+
+/* start footer  */
+
+footer .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0 1rem;
+}
+
+footer .container h2 {
+  color: var(--white-color);
+  margin: .5rem;
+}
+
+footer .container a span {
+  margin: 2rem 0 1rem;
+  width: 4rem;
+  height: 4rem;
+  border: 2px var(--green-color) solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: jumping .9s infinite alternate;
+}
+
+footer .container a span i {
+  color: var(--green-color);
+
+}
+
+footer .container p {
+  color: var(--gray-color);
+  letter-spacing: 2px;
+  margin-bottom: 0;
+}
+
+@keyframes jumping {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* end footer  */
